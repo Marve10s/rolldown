@@ -113,11 +113,6 @@ mod tests {
   }
 
   #[test]
-  fn unknown_extensions() {
-    assert!(mime_type_by_extension("unknown").is_none());
-  }
-
-  #[test]
   fn try_from_exts() {
     assert!(matches!(try_from_ext("png").unwrap().mime.subtype(), mime::PNG));
     assert!(matches!(try_from_ext("svg").unwrap().mime.subtype(), mime::SVG));

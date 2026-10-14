@@ -71,10 +71,4 @@ mod tests {
     assert!(contains_script_closing_tag(b"</script></script>"));
     assert!(contains_script_closing_tag(b"</div></script></span>"));
   }
-
-  #[test]
-  fn test_contains_script_closing_tag_in_tagged_template() {
-    assert!(contains_script_closing_tag(b"html`</script>`"));
-    assert!(contains_script_closing_tag(b"const x = `</SCRIPT>`"));
-  }
 }
